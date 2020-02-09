@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+@import "variable";
 * {
   box-sizing: border-box;
 }
@@ -29,7 +27,7 @@ margin: 0 20px;
   &__user-name{
   font-weight: bold;
   line-height: 20px;
-  color:#ffffff;
+  color:$white-color;
     }
   }
 }
@@ -42,7 +40,7 @@ margin: 0 20px;
 
   .contents__btn{
   padding-left: 5px;
-  color: #ffffff;
+  color: $white-color;
   text-decoration: none;
 }
   }
@@ -59,14 +57,14 @@ margin: 0 20px;
     &__name{
       font-size: 15px;
       margin-bottom: 5px;
-      color:#ffffff ;
+      color:$white-color;
     
     }
   }
 }
       .side-groups__group__message{
       font-size: 11px;
-      color:#ffffff ;
+      color:$white-color;
       margin-bottom: 40px;
     
   }
@@ -77,7 +75,7 @@ margin: 0 20px;
       height: 100vh;
     }
     .main-header{
-      background-color: #ffffff;
+      background-color:$white-color;
       height: 100px;
       display: flex;
       justify-content: space-between;
@@ -103,7 +101,7 @@ margin: 0 20px;
 
           
     .edit{
-      color: #38aef0;
+      color: $blue-color;
       padding: 0 20px;
       margin-top: 28px;
       height: 40px;
@@ -115,7 +113,7 @@ margin: 0 20px;
 
     .main-header_edit__btn{
       font-size: 16px;
-    color: #38aef0;
+    color: $blue-color;
     line-height: 40px;
     }
     .messages{
@@ -184,7 +182,7 @@ margin: 0 20px;
           height: 50px;
           padding: 0 30px;
           margin-left: 15px;
-          background-color: #38aef0;
+          background-color:$blue-color;
           color: white;
           cursor: pointer;
     
