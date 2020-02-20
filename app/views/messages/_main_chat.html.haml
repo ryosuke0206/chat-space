@@ -5,26 +5,16 @@
         aaaa
       .main-header__left-box__member-name
         member:
-    =link_to"#" , class: "edit"do 
-      .main-header__edit-btn
-        Edit
+        .main-header__edit-btn
+          Edit
 
   .messages
-    .message
-      .message-info
-        .message-info__name
-          aaaa
-        .message-info__data
-          020/02/07(Fri) 20:14:09
-      .message-info__text
-        menber
+    = render @messages
   .form
-    %form.new_message
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
       .input-box
-        %input{type: " text ",class:  " input-box__text ", placeholder: "type a message"}
-        %label{class:  " input-box__image "}
-          =icon('fas' , 'image')
-          %input{type:"file", class:"input-box__image__file"}
-
-    %input{type: "submit", class: "submit-btn",value:"send"}
-      
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
