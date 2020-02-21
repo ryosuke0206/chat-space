@@ -2,11 +2,19 @@
   .main-header
     .main-header__left-box
       .main-header__left-box__group-name
-        aaaa
+        =@group.name
+
       .main-header__left-box__member-name
-        member:
-        .main-header__edit-btn
-          Edit
+        Member：
+        - @group.users.each_with_index do |user, i|
+          - unless i.zero?
+            ,
+          = user.name
+          
+      
+    =link_to"#" , class: "edit"do 
+      .main-header__edit-btn
+        Edit
 
   .messages
     = render @messages
