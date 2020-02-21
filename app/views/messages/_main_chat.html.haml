@@ -12,13 +12,13 @@
           = user.name
           
       
-    =link_to"#" , class: "edit"do 
+    =link_to edit_group_path(@group.id) ,class: "edit"do 
       .main-header__edit-btn
         Edit
 
   .messages
     = render @messages
-  .form
+  .form 
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
       .input-box
