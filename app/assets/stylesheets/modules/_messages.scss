@@ -4,14 +4,12 @@
   box-sizing: border-box;
 }
 .wrapper{
-  display: flex;
-  width: 100%;
-  height: 100%;
 }
 
 .chat-side{
 background-color: #2f3e51;
 width: 300px;
+float: left;
 
   &_header{
 background-color: #253141;
@@ -25,6 +23,7 @@ justify-content: space-between;
 width: 260px;
 height: 20px;
 margin: 0 20px;
+font-weight: bold;
   &__user-name{
   font-weight: bold;
   line-height: 20px;
@@ -56,16 +55,19 @@ margin: 0 20px;
       height: calc(100vh - 100px);
       padding: 20px 20px;
       overflow: scroll;
-    
+      text-decoration: none;
+
     &__group{
       text-decoration: none;
       box-sizing: border-box;
-    
+      text-decoration: none;
+
     &__name{
       font-size: 15px;
       margin-bottom: 5px;
       color:$white-color;
-    
+      text-decoration: none;
+
     }
   }
 }
@@ -73,13 +75,14 @@ margin: 0 20px;
       font-size: 11px;
       color:$white-color;
       margin-bottom: 40px;
-    
+      text-decoration: none;
+
   }
     
     .chat-main{
       background-color: #fafafa;
       width:calc(100vw - 300px);
-      height: 100vh;
+      float: left;
     }
     .main-header{
       background-color:$white-color;
@@ -88,6 +91,7 @@ margin: 0 20px;
       justify-content: space-between;
       padding: 0 40px;
       border: 1px solid #d2d2d2;
+      overflow: scroll;
 
   
     &__left-box{
@@ -124,9 +128,11 @@ margin: 0 20px;
     line-height: 40px;
     }
     .messages{
-      padding: 0 40px;
+      padding: 0 46px 40px;
       width: 100%;
-      height: calc(100%- 100px);
+      height: calc(100vh - 100px);
+      overflow: scroll;
+
     }
     .message{
       padding-bottom: 46px;
@@ -161,37 +167,43 @@ margin: 0 20px;
       padding: 20px  40px;
       position: absolute;
       bottom: 0;
-    
-        .input-box{
-          display: flex;
-          position: relative;
-          width:calc(100vw - 500px);
-          .form__message{
-            height: 50px;
-            width: 100%;
-            color: #434a54;
-            border-style:none;
-            padding: 0 40px 0 10px;
-          }
-          .form__mask__image{
-            position: absolute;
-            cursor: pointer;
-            font-size: 1.3rem;
-            top: 10px;
-            right: 10px;
-            .icon{
-                display: none;
-              }
-          }
-        }
-        .form__submit {
-          width: 100px;
+      display: flex;
+      .new_message{
+        display: flex;
+      }
+      .input-box{
+        position: relative;
+        
+      }
+        .form__message{
           height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color:$blue-color;
-          color: white;
+          color: #434a54;
+          border-style:none;
+          padding: 0 40px 0 10px;
+          width: 585px;
+
+        }
+        .icon{
+          position: absolute;
           cursor: pointer;
-    
+          font-size: 1.3rem;
+          top: 10px;
+          right: 10px;
+        }
+          .hidden{
+              display: none;
+            }
+        
+      
+      .form__submit {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color:$blue-color;
+        color: white;
+        cursor: pointer;
+  
+      
         }
     }
