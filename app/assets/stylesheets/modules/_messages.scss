@@ -129,13 +129,15 @@ font-weight: bold;
     }
     .messages{
       padding: 0 46px 40px;
-      width: 100%;
-      height: calc(100vh - 100px);
+      height: calc(100vh - 190px);
       overflow: scroll;
 
     }
     .message{
       padding-bottom: 46px;
+      width: 100vh;
+
+
     }
     .message-info{
       display: flex;
@@ -163,31 +165,29 @@ font-weight: bold;
     .form{
       height: 90px;
       background-color: #d2d2d2;
-      display: flex;
       padding: 20px  40px;
-      position: absolute;
-      bottom: 0;
-      display: flex;
+
       .new_message{
         display: flex;
       }
       .input-box{
         position: relative;
-        
+
       }
         .form__message{
           height: 50px;
           color: #434a54;
           border-style:none;
           padding: 0 40px 0 10px;
-          width: 585px;
+          width:calc(100vw - 300px);
+
 
         }
         .icon{
           position: absolute;
           cursor: pointer;
           font-size: 1.3rem;
-          top: 10px;
+          top: 15px;
           right: 10px;
         }
           .hidden{
