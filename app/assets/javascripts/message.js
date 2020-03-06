@@ -51,20 +51,17 @@ $(function(){
         data: {last_id: last_message_id} 
       })
       .done(function (messages) {
-        if (messages.length !== 0) {
         var insertHTML = '';
         messages.forEach(function (message) {
           insertHTML = buildHTML(message); 
           $('.messages').append(insertHTML);
         })
-        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })
       .fail(function () {
         alert('自動更新に失敗しました');
       });
     }
   };
-  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-    setInterval(reloadMessages, 7000);
-  }
+  setInterval(reloadMessages, 5000);
   });
